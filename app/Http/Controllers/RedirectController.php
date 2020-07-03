@@ -43,4 +43,15 @@ class RedirectController extends Controller
 
         }
     }
+
+    public function show($hash){
+
+        $redirect = Redirect::where('id',hexdec($hash))->first();
+
+        if($redirect == null){
+            return abort(404);
+        }
+
+        return view('urldata',['redirect'=>$redirect]);
+    }
 }

@@ -21,7 +21,7 @@ Route::get('/', function () {
 Route::get('/register', 'RedirectController@regist')->name('url.register');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/registurl', 'RedirectController@registurl')->name('url.regist');
-
+Route::get('/show/{hash}', 'RedirectController@show')->name('url.show');
 
 
 Route::get('/{hash}', 'RedirectController@getByLitleHash');
