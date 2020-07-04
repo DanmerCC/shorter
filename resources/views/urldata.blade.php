@@ -9,13 +9,20 @@
     </div>
     <div class="row">
         <div class="col-12">
-            Cantidad de visitas {{ (int)$redirect->count }}</h1>
+            Cantidad de visitas <span> <h1> {{ (int)$redirect->count }}</h1></span>
         </div>
     </div>
 
     <div class="row">
         <div class="col-12">
-            Link pequeño <a href="">{{ $redirect->generated_url }}</a></h1>
+            Link pequeño <h2><a href="{{ $redirect->generated_url }}">{{ $redirect->generated_url }}</a></h2>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-12">
+            Link para seguimiento(esta pagina) <a href="{{ route('url.show',['hash'=>$redirect->hexaid]) }}">{{ route('url.show',['hash'=>$redirect->hexaid]) }}</a></h1>
         </div>
     </div>
 </div>

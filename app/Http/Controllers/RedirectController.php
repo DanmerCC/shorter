@@ -34,7 +34,7 @@ class RedirectController extends Controller
 
         if($redirect->save()){
 
-            return view('urldata',['redirect'=>$redirect]);
+            return redirect(route('url.show',['hash'=>$redirect->hexaid]));
         }
         else{
 
