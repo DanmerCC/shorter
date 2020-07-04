@@ -53,4 +53,8 @@ class RedirectController extends Controller
 
         return view('urldata',['redirect'=>$redirect]);
     }
+
+    public function test(){
+        return view('test');
+    }
 }
