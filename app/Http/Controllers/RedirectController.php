@@ -32,7 +32,6 @@ class RedirectController extends Controller
 
         $redirect = new Redirect($request->only(['to_url']));
 
-
         if($redirect->save()){
 
             return view('urldata',['redirect'=>$redirect]);
